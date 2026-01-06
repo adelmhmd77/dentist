@@ -360,6 +360,7 @@ body {
 
 .pricing .prices .price:hover::after {
   height: 100%;
+  width: 100%;
 }
 
 .pricing .prices .price:hover .pp {
@@ -401,7 +402,6 @@ body {
 }
 
 .pricing .prices .price:hover {
-  transform: scale(1.03);
   transition: 0.3s;
 }
 
