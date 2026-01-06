@@ -1,0 +1,598 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 900px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* ---------------------------------HEADER--------------------------------- */
+.header {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  background: #2a9d90a9;
+  color: aliceblue;
+  padding: 15px;
+  z-index: 999;
+}
+.header img {
+  width: 4%;
+  float: left;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-left: 30px;
+}
+.header span {
+  float: left;
+  margin-top: 10px;
+  position: relative;
+}
+.header span input {
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+}
+.header span i {
+  position: absolute;
+  color: #000;
+  left: 10px;
+  top: 5px;
+  font-size: 18px;
+}
+.header ul {
+  list-style: none;
+  float: right;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+.header ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.header ul li a {
+  color: white;
+  position: relative;
+  text-decoration: none;
+}
+.header ul li a::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  top: 100%;
+  height: 2px;
+  left: 0;
+  background: #176d63;
+  opacity: 0;
+  transition: 1s;
+}
+.header ul li a:hover::after {
+  opacity: 1;
+  width: 100%;
+}
+.header .hidden {
+  position: absolute;
+  background: #2a9d90a9;
+  visibility: hidden;
+  margin: 0;
+  padding: 15px;
+  height: 130px;
+  transition: 0.5s;
+  top: 65px;
+  left: 85%;
+  border-radius: 20px;
+}
+.header .hidden li {
+  display: block;
+  margin-top: 15px;
+}
+.header .apearer:hover .hidden {
+  visibility: visible;
+}
+
+/* ---------------------------------HERO--------------------------------- */
+.hero {
+  background: url("../images/Dental\ treatment\ Photos\ -\ Download\ Free\ High-Quality\ Pictures\ _\ Freepik\ \(1\).jpg")
+    no-repeat center center;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+.hero .content {
+  width: 70%;
+  top: 35%;
+  left: 15%;
+}
+.hero .content h1 {
+  color: #264653;
+  font-size: 55px;
+  margin-bottom: 40px;
+}
+.hero .content p {
+  color: #555c5d;
+  margin-bottom: 40px;
+}
+.overlay {
+  background: #e9f5f3ab;
+  height: 500px;
+}
+/* ---------------------------------WELCOME--------------------------------- */
+.welcome .welcome-card {
+  border: 1px solid #1a6d64;
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  margin-left: 5.7%;
+  margin-bottom: 50px;
+}
+.welcome .welcome-card::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  background: #2a9d8f;
+  transition: 0.7s;
+  border-radius: 20px;
+  z-index: -1;
+}
+.welcome .welcome-card:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.welcome .welcome-card:hover i {
+  color: #a8dadc;
+}
+.welcome .welcome-card:hover h3 {
+  color: #073933;
+}
+.welcome .welcome-card:hover p {
+  color: #ffffff;
+}
+.welcome .welcome-card a {
+  color: #176d63;
+}
+.welcome .welcome-card:hover a {
+  background: #f4a261;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #000;
+}
+
+/* ---------------------------------FEATURED--------------------------------- */
+.featured {
+  margin-bottom: 150px;
+}
+.f-card {
+  width: 300px;
+  margin-left: 5%;
+  margin-top: 30px;
+}
+.f-card .overlay {
+  background: #d1f8f2ba;
+  opacity: 0;
+  transition: 0.5s;
+  border-radius: 20px;
+  border: 2px #4a7f81 solid;
+}
+.f-card img {
+  border-radius: 20px;
+  width: 100%;
+  height: 200px;
+  border: 2px #4a7f81 solid;
+}
+.f-card .overlay h3 {
+  margin-top: -20px;
+  color: #264653;
+  font-size: 30px;
+}
+.f-card .overlay p {
+  margin-bottom: 20px;
+  color: #000;
+}
+.f-card .overlay i {
+  background: #2A9D8F;
+  color: #E9F5F3;
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.f-card:hover .overlay {
+  opacity: 1;
+}
+
+/* ---------------------------------WHAT WE OFFER--------------------------------- */
+.offer {
+  margin-bottom: 150px;
+  margin-top: 50px;
+  width: 100%;
+  overflow: auto;
+}
+.offer .offer-cards {
+  margin: auto;
+  margin-top: 0px;
+}
+.offer .offer-card {
+  border: 1.5px #4a7f81 solid;
+  width: 300px;
+  height: 200px;
+  padding: 10px 30px;
+  margin-left: 90px;
+  position: relative;
+  border-radius: 20px;
+  float: left;
+  margin-bottom: 30px;
+}
+.offer .offer-card::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  background: #4a7f81;
+  z-index: -1;
+  border-radius: 19px;
+  transition: 0.5s;
+  
+}
+.offer .offer-card:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.offer .offer-card i {
+  position: absolute;
+  font-size: 30px;
+  top: 30px;
+  color: #4a7f81;
+}
+.offer .offer-card h3 {
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #6D7A7C;
+}
+.offer .offer-card p {
+  margin-left: 50px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+.offer .offer-card:hover i {
+  color: #E9F5F3;
+}
+.offer .offer-card:hover h3 {
+  color: #A8DADC;
+}
+.offer .offer-card:hover p {
+  color: #ffffff;
+}
+
+/* ---------------------------------WHY CHOOSE US--------------------------------- */
+.why {
+  margin-bottom: 150px;
+  overflow: auto;
+}
+.why-content {
+  margin-left: 100%;
+  padding: 50px;
+  overflow: auto;
+}
+.why .left {
+  width: 40%;
+  margin-right: 50px;
+  margin-left: 70px;
+}
+.why .left ul li i {
+  background: #c3ded9      ;
+  padding: 5px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.why .right {
+  width: 40%;
+  height: 500px;
+}
+.why .right img {
+  width: 350px;
+  height: 500px;
+}
+.why .right p {
+  margin-right: 55px;
+}
+.why .right p i.active {
+  color: #c3ded9;
+}
+.why .right p i:hover {
+  color: #c3ded9;
+}
+
+/* ---------------------------------ACHIVMENTS--------------------------------- */
+.achivment {
+  background: url("../images/Download\ AI\ generated\ Dental\ clinic\ advertisment\ background\ with\ copy\ space\ for\ free.jpg") center center no-repeat fixed;
+  background-size: cover;
+}
+.achivment .overlay {
+  background: #00000094;
+}
+.achivment .overlay .ach {
+  width: 20%;
+  margin-top: 11%;
+  margin-left: 4%;
+}
+.achivment .overlay .ach i {
+  font-size: 30px;
+  color: #2A9D8F;
+}
+.achivment .overlay .ach h4 {
+  font-size: 25px;
+}
+.achivment .overlay .ach p {
+  font-size: 20px;
+}
+
+/* ---------------------------------PRICING--------------------------------- */
+.pricing .prices{
+  height: 450px;
+}
+.pricing .prices .price {
+  width: 273px;
+  height: 380px;
+  margin-left: 75px;
+}
+
+.pricing .prices .price::after {
+  content: "";
+  width: 100%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  background: #264653c8; /* Text Dark with transparency overlay */
+  position: absolute;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.pricing .prices .price:hover::after {
+  height: 100%;
+}
+
+.pricing .prices .price:hover .pp {
+  border: 2px solid #FFFFFF; /* White */
+}
+
+.pricing .prices .price .pp {
+  width: 120px;
+  height: 120px;
+  padding: 12px 0px;
+  margin: 20px auto;
+  position: relative;
+  border-radius: 50%;
+  border: 2px solid #2A9D8F; /* Primary */
+  background: #E9F5F3; /* Secondary background inside circle */
+}
+
+.pricing .prices .price p {
+  color: #264653; /* Text Dark for plan name */
+}
+
+.pricing .prices .price:hover ul li {
+  color: #FFFFFF; /* White text on hover */
+}
+
+.pricing .prices .price .pp h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 20px;
+  margin-left: 0;
+  color: #F4A261;
+}
+
+.pricing .prices .price ul li {
+  color: #264653; /* Text Dark */
+}
+
+.pricing .prices .price:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+
+/* ---------------------------------WHAT PEOPLE SAY--------------------------------- */
+.khalid {
+  background: url("../images/download\ \(2\).jpg") center center no-repeat fixed;
+  background-size: cover;
+  height: 400px;
+}
+.khalid .kalid-content {
+  width: 100%;
+  height: 100%;
+  background: #000000b5;
+}
+.khalid .kalid-content .person {
+  width: 35%;
+  margin-top: 9%;
+  margin-left: 120px;
+}
+.khalid .kalid-content .person p {
+  line-height: 1.6;
+}
+.khalid .kalid-content .person .top {
+  margin-bottom: 40px;
+}
+.khalid .kalid-content .person .top img {
+  width: 100px;
+  top: -30px;
+  height: 100px;
+}
+.khalid .kalid-content .person .top h3 {
+  margin-left: 130px;
+  margin-top: -20px;
+}
+.khalid .kalid-content .person .top span {
+  margin-left: 130px;
+  line-height: 10px;
+}
+
+/* ---------------------------------TEAM--------------------------------- */
+.team-cards {
+  margin-left: 30px;
+}
+.team-card {
+  width: 303px;
+  height: 312px;
+  background: #20746a;
+  margin-left: 50px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.team-card img {
+  width: 97%;
+  height: 220px;
+  margin-bottom: 5px;
+}
+.team-card ul {
+  right: 25px;
+  opacity: 0;
+  list-style: none;
+}
+.team-card ul li {
+  background: #2A9D8F;
+  margin-bottom: 3px;
+  padding: 5px;
+}
+.team-card ul li i{
+  color: white;
+}
+.team-card h3{
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.team-card p{
+  color: #5fd2c5;
+}
+.team-card .img-overlay {
+  background: #00000082;
+  width: 85%;
+  height: 220px;
+  opacity: 0;
+  transition: 1s;
+}
+.team-card:hover .img-overlay {
+  opacity: 1;
+}
+.team-card:hover ul {
+  opacity: 1;
+}
+.team-card:hover h3 {
+  color: #5fd2c5;
+}
+.team-card:hover p {
+  color: rgb(193, 193, 193);
+}
+.team-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background: #0000004a;
+  transition: 0.5s;
+  opacity: 0;
+  border-radius: 20px;
+}
+.team-card:hover::after {
+  height: 100%;
+  opacity: 1;
+}
+
+/* ---------------------------------News--------------------------------- */
+.news {
+  margin-bottom: 150px;
+  margin-top: 50px;
+}
+.news .news-cards .news-card {
+  width: 303px;
+  height: 502px;
+  margin-left: 60px;
+}
+.news .news-cards .news-card img {
+  width: 100%;
+  height: 200px;
+}
+.news .news-cards .news-card a {
+  margin-left: 10px;
+}
+.news .news-cards .news-card a i {
+  color: #4fc4b6;
+}
+.news .news-cards .news-card::after {
+  content: "";
+  width: 100%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  position: absolute;
+  background: #207c71;
+  z-index: -1;
+  transition: 0.4s;
+}
+.news .news-cards .news-card:hover::after {
+  height: 100%;
+}
+.news .news-cards .news-card h3 {
+  line-height: 1.6;
+  margin-bottom: 5px;
+  color: #4fc4b6;
+}
+.news .news-cards .news-card p {
+  line-height: 1.5;
+}
+.news .news-cards .news-card a {
+  text-decoration: none;
+  color: #4fc4b6;
+}
+.news .news-cards .news-card:hover {
+  color: white;
+}
+/* ---------------------------------FOOTER--------------------------------- */
+.footer {
+  height: 340px;
+  background: #23786e;
+}
+.footer img {
+  width: 350px;
+  height: 150px;
+}
+.footer ul li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.footer ul li i {
+  background: #ffffff;
+  padding: 15px 15px;
+  font-size: 16px;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+.footer ul li i{
+  color: #176d63;
+}
+.footer ul li i:hover {
+  background: #2bb7a6;
+  color: #ffffff;
+}
+.footer a{
+  color: #37b0a2;
+  text-decoration: none;
+}
